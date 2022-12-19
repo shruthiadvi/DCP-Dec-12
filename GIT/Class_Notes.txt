@@ -1,3 +1,285 @@
+
+
+DCP - 12/12/2022
+
+@@@@@@
+DAY-1
+@@@@@@
+
+Intro. to DevOps!!!!!
+
+	SDLC - Software Development Lifecycle!!!
+	
+	Requirement Analysis
+	Design
+	Development/Coding
+	Testing
+	Implementation / Deployment
+	Monitoring!
+	
+	Waterfall ::::  -- it is Linear in fashion!
+	
+		Requirement Analysis
+		Design
+		Development/Coding				java/python
+		Testing
+		Implementation / Deployment
+		Monitoring!
+		
+		To Create a software application/Project!
+
+	Agile Methodologies!!!
+	
+		Requirement Analysis
+		Design
+		Development/Coding				java/python
+		Testing
+		Implementation / Deployment
+		Monitoring!
+		
+		To Create a software application/Project! -- having various modules / iteration.
+			
+		Iteration - 1					Module / Function 
+			Requirement Analysis
+			Design
+			Development/Coding				java/python
+			Testing
+			Implementation / Deployment
+			Monitoring!
+
+		Iteration - 2
+			Requirement Analysis
+			Design
+			Development/Coding				java/python
+			Testing
+			Implementation / Deployment
+			Monitoring!
+			
+		Iteration - 3
+			Requirement Analysis
+			Design
+			Development/Coding				java/python
+			Testing
+			Implementation / Deployment
+			Monitoring!
+	
+		Finally, all these iterations are integrated and delivered as a software application.
+
+	DevOps !!!!
+	
+Eg.: 
+	E-commerce portal
+	Facebook
+	Tele-Comm 			Service providers ... 
+	
+	1 -- introduce new offer 
+	2 -- 
+	
+	
+	DevOps is a Software Development Strategy!
+	
+	Continuous Development !				===> related to Appln. DEV Team.
+	
+	Continuous Integration !
+	
+	Continuous Testing !
+	
+	Continuous Delivery !
+	
+	Continuous Deployment !
+	
+for code development, there are some time frame! --> 2 wks. 1
+
+Integration !!!  
+
+Test 2 wks 
+
+
+	Software Application/Product!
+
+
+	-	Monolith Application Architecture!
+	
+			All the process are deployment as one Application!!!
+	
+		Process / tasks / Functions / Modules 	
+	
+	
+	- 	Microservices based Architecture!
+	
+		Create a service 
+		
+		1 process === 1 service 
+	
+	
+E-commerce :
+	www.amazon.com 
+	
+	List of Process / tasks / Functions / Modules :::
+	
+		User Sign-Up					-- Developer-1 -- once the coding is completed(Testing)! 
+		User Sign-In 					-- Developer-2 --
+		Search for products
+		Add the product to cart
+		Buy the product 
+		fill the form 
+		Make payment
+		Place the Order
+		Track the status
+		
+		
+Application Owner / Architect	
+	
+	
+@@@@@@
+DAY-2
+@@@@@@
+
+
+Difference between :	
+	
+	Continuous Integration !
+	
+	Continuous Delivery !
+	
+	Continuous Deployment !
+	
+Strategy -- Process -- --- Always subjected to Continuous Improvement!!!
+
+
+Development Workflow :::
+
+	Code the changes / Module / Service 			===> Java/Python/NodeJS/Angular/.Net (Programming Languages)
+	
+	Build -- Compile and Create Artifacts(*.war/*.jar/*.exe)!!!
+	
+	Perform Unit Test 
+	
+	Testing Teams 
+		QA 
+		UAT
+		PreProd
+	
+	PROD 
+	
+
+	Continuous Integration  :::
+	
+		Code/Build/Create Artifacts and Integrate for further testing
+	
+
+Non-Prod Environment								Prod Environment ( LIVE Environment )
+	
+	DEV 											PROD 
+	QA 
+	UAT
+
+	
+
+The Production Release can be done by :
+	
+	Continuous Delivery		:	Before the code is promoted to PROD envi. we need Manual Approval from various Teams.
+	
+	Continuous Deployment 	:  	The Code can be automatically promoted to PROD Environment without any Manual Intervention.
+	
+As a DevOps Engg. is to automate this end-to-end CI/Cd/CD
+
+	Code Build, Create Artifacts, Integrate for further testing(QA/UAT) and PROD Deployment
+
+Banking Appln.
+
+Facebook
+Netflix 
+amazon.com
+google
+
+
+		People
+		Process & Strategies
+		Tools
+
+Business :::
+
+	DevOps Team :::
+		
+		Identify the various Teams involved in the end-to-end SDLC Process
+			Infra					
+			Dev
+			Test 
+			Release Management
+			Monitoring Team
+			Prod Support Team
+			Security Team
+			
+			Vendors 
+	
+		Creating CI/CD Pipeline
+	
+	Detailed DevOps assessment 
+	
+		Waterfall --> Agile --> DevOps --> DevSecOps --> SRE --> GitOps --> AIOps --> FinOps
+	
+	DevOps Tool :::
+	
+		
+			Infra-structure Team		-- Provision the servers and config the servers  - 	Terraform/Ansible/Puppet/Chef/CF/ARM
+			Dev							-- VS Code / GIT / GITHub
+			Test 						-- Selenium/Junit
+			Release Management			-- Anisible/Docker/Kubernetes/
+			Monitoring Team				-- Promethus/Grafana/Nagios/
+			Prod Support Team			-- AppDynamics		
+			Security Team				-- Static/Dynamic Code Analyzer - Sonarqube 
+			
+			Build Orchestrator or CI/CD Tools: 
+			
+			Jenkins 
+			Bamboo
+			Gitlab-ci
+			Azure Pipeline 
+	
+	
+Version Control System :::
+
+		Developer!!!	
+			samplepgm.java	index.jsp
+	
+		Version Controlled!		
+		It should be easily tracked!
+	
+		Visual Studio Code (IDE) --> to create the source.
+		
+		whenever we save the program -- it shd be assigned with a version. 
+		index.jsp v1.0			Tested -- successful
+		index.jsp v1.1
+		index.jsp v1.2
+		index.jsp v1.3
+		index.jsp v1.4
+		index.jsp v1.5			Tested -- Not working as expected	
+	
+	GIT --> Distributed VC System
+	
+	scripts :::
+	
+		shell 
+		groovy
+		yaml
+		python scripts 
+	
+	
+	DevOps Engg. write Automation Scripts.
+	
+	GIT ---> Distributed VCS ===> Local repo & Remote Repo
+	
+	Git is a Local Repository
+	
+	Remote GIT Repo / Servers
+	GitHub is a Remote Git Repository
+	Azure Repo
+	Bitbucket
+	Gitlab
+	AWS Code Commit
+
+
 @@@@@@
 Day-3
 @@@@@@
@@ -443,7 +725,7 @@ Summary:
   679  git commit "CM1"
   680  git commit -m "CM1"
   681  echo "rec1" >> f2.txt
-  682  git commit "CM1"
+  682  git commit "CM1"	 
   683  git add .
   684  git commit -m "CM2"
   685  echo "rec1" >> f3.txt
@@ -456,3 +738,158 @@ Summary:
   692  git reset --soft b3ef072
   693  git log --oneline
   694  history
+
+
+@@@@@@@
+#DAY-6
+@@@@@@@
+
+	GIT Branches
+	
+		GIT Branching Strategies!!!! -- used to isolate the code changes from master branch in order ensure the integrity of Master Branch.
+		
+		git init  
+		
+		
+		master 					===> consider as a master copy or prod copy of the source code.
+		
+			develop 
+		
+				feature1		
+				feature2
+				feature3
+		
+		
+	Local Repo 						Remote Repo	
+	
+	
+	
+	GIT Remote Repository
+
+
+		Java_Project_folder (master)
+			index.jsp 
+			home.html
+			process.java 
+			
+		feature1 		branch 
+			
+			index.jsp 
+			home.html
+			process.java 			
+			
+
+	GIT Branching Strategies!!!!
+	
+	master 	release 								
+	(hotfix/adhoc)
+		Release Branch	
+			Integration Branch	 ==> - final_CM		
+				develop_Branch1(Team1) ==> ==> cm1,2,3,4,5,6,7,8,9......100 -- cm1,2,3,4,5,6,7,8,9......100
+					feature1 			--> Change request1 ==> cm1,2,3,4,5,6,7,8,9......100 - final_CM
+					
+					feature2 			--> Change request2 ==> cm1,2,3,4,5,6,7,8,9......100
+					feature3 			--> Change request3 ==> cm1,2,3,4,5,6,7,8,9......100
+				develop_Branch2(Team1)
+					feature1 			--> Change request1 
+					feature2 			--> Change request2
+					feature3 			--> Change request3						
+				develop Branch(Team2) 
+					feature1 			--> Change request1
+					feature2 			--> Change request2
+					feature3 			--> Change request3		
+
+Create the branch
+WOrk on the branch
+merge the changes to upstream branch (master) 
+
+	git checkout -b feature1 
+	git branch feature1 
+	git switch
+	
+	
+	git merge feature1 
+	
+	master 
+		feature1
+		feature2
+		feature3
+		
+	repo:
+	
+				master	f1.txt
+				
+	developer1		f1	f1.txt 
+	developer2		f2  f1.txt 
+
+
+	Merge Conflict : 
+
+v1 s1.txt 
+rec1
+rec from feature2
+
+		gitbash/gui -- local repository
+		gitlab
+		azure repos
+		aws code commit 
+		bit bucket 
+		github
+
+
+	git rebase
+	
+	git squash
+	
+		
+		master 		
+			cm1,cm2,cm3
+			cm1,cm2,cm3,f1cm1,f1cm2
+			cm1,cm2,cm3,f1cm1,f1cm2,f2cm1,f2cm2		
+			
+			feature1 
+				cm1,cm2,cm3
+				cm1,cm2,cm3,f1cm1,f1cm2
+				
+	
+			feature2
+				cm1,cm2,cm3
+				cm1,cm2,cm3,f2cm1,f2cm2
+
+
+			rebase!!!!
+			
+			feature2
+				cm1,cm2,cm3
+				cm1,cm2,cm3,f2cm1,f2cm2
+				
+				> git rebase master 
+				
+				cm1,cm2,cm3,f1cm1,f1cm2,f2cm1,f2cm2
+
+	fast forward merge . 
+
+
+		****
+			Before you merge your feature to the upstream branch. Always do rebase.
+			Rebase is used to sync your feature branch with your upstream branch.
+			
+	git squash :::
+	
+		It is used to combine the commits!!!!
+	sqash can be performed:
+	
+	-	Before Merge 
+			master ==> cmfn1,cmfn2
+				feature_Branch --> CM1,2,3,4,5 - cmfn1 --> cm6,7,8,9,10 --> cmfn2
+		
+	-	While Merging 
+				feature_Branch --> cm1,2,3,4,5,6,7,8,9......100 - final_CM
+		
+		
+
+
+
+
+
+
