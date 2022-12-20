@@ -740,9 +740,9 @@ Summary:
   694  history
 
 
-@@@@@@@
-#DAY-6
-@@@@@@@
+@@@@@@@@@@@
+#DAY-6 & 7
+@@@@@@@@@@@
 
 	GIT Branches
 	
@@ -874,6 +874,7 @@ rec from feature2
 			Before you merge your feature to the upstream branch. Always do rebase.
 			Rebase is used to sync your feature branch with your upstream branch.
 			
+			
 	git squash :::
 	
 		It is used to combine the commits!!!!
@@ -883,13 +884,76 @@ rec from feature2
 			master ==> cmfn1,cmfn2
 				feature_Branch --> CM1,2,3,4,5 - cmfn1 --> cm6,7,8,9,10 --> cmfn2
 		
+		run the below command from feature branch :		
+			> git rebase -i HEAD~4
+		
 	-	While Merging 
 				feature_Branch --> cm1,2,3,4,5,6,7,8,9......100 - final_CM
 		
+		run the below command from master :
+			> git merge --squash <feature1>
+
+rebase::
+
+	master
+		cm1,cm2,cm1 from feature1
 		
+	feature1 
+		cm1,cm2,cm1 from feature1
+
+	feature2
+		cm1,cm2,cm1 from feature2,cm2 from feature2
+
+	git merge feature2:::
+	
+		cm1,cm2,cm1 from feature2,cm2 from feature2,cm1 from feature1
+
+STASH ???
+
+	
+		master 
+			feature1 ----> src.java --> added to staging  		
+			git status 		
+			feature2 
+	
+
+GIT Remote Repository!!!!
+
+		github!!!
+		
+		create, branch, merge - pull reqest, fork, create access token.
+		
+		fork 		--> Used to copy one remote repo to another.
+		git clone 	--> used to copy the remote repo into local repo 
+		git fetch	
+		git pull
+		git push
+		
+		git remote -v 
+		git remote add 
+		git remote remove 
+
+		Pull Request :
 
 
+scenario 1:
+
+	git clone 
+
+scenario 2 :
+
+	git remote add  -- is used to link the remote repo with local.
+	git push -- is used to push the changes from local to remote.
+	git fetch --  just update the changes in local repo
+	git pull -- will update the changes in local repo and update the content into working dir as well.
+	
+
+- Change Request
+- Bug fixing 
+- Create New projects  
 
 
+EC2 -- 
 
-
+MobaXterm?		windows
+Putty?			Mac / terminal - ssh
