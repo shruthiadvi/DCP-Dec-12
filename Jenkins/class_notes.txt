@@ -1,0 +1,1045 @@
+
+
+DCP - 12/12/2022
+
+@@@@@@
+DAY-1
+@@@@@@
+
+Intro. to DevOps!!!!!
+
+	SDLC - Software Development Lifecycle!!!
+	
+	Requirement Analysis
+	Design
+	Development/Coding
+	Testing
+	Implementation / Deployment
+	Monitoring!
+	
+	Waterfall ::::  -- it is Linear in fashion!
+	
+		Requirement Analysis
+		Design
+		Development/Coding				java/python
+		Testing
+		Implementation / Deployment
+		Monitoring!
+		
+		To Create a software application/Project!
+
+	Agile Methodologies!!!
+	
+		Requirement Analysis
+		Design
+		Development/Coding				java/python
+		Testing
+		Implementation / Deployment
+		Monitoring!
+		
+		To Create a software application/Project! -- having various modules / iteration.
+			
+		Iteration - 1					Module / Function 
+			Requirement Analysis
+			Design
+			Development/Coding				java/python
+			Testing
+			Implementation / Deployment
+			Monitoring!
+
+		Iteration - 2
+			Requirement Analysis
+			Design
+			Development/Coding				java/python
+			Testing
+			Implementation / Deployment
+			Monitoring!
+			
+		Iteration - 3
+			Requirement Analysis
+			Design
+			Development/Coding				java/python
+			Testing
+			Implementation / Deployment
+			Monitoring!
+	
+		Finally, all these iterations are integrated and delivered as a software application.
+
+	DevOps !!!!
+	
+Eg.: 
+	E-commerce portal
+	Facebook
+	Tele-Comm 			Service providers ... 
+	
+	1 -- introduce new offer 
+	2 -- 
+	
+	
+	DevOps is a Software Development Strategy!
+	
+	Continuous Development !				===> related to Appln. DEV Team.
+	
+	Continuous Integration !
+	
+	Continuous Testing !
+	
+	Continuous Delivery !
+	
+	Continuous Deployment !
+	
+for code development, there are some time frame! --> 2 wks. 1
+
+Integration !!!  
+
+Test 2 wks 
+
+
+	Software Application/Product!
+
+
+	-	Monolith Application Architecture!
+	
+			All the process are deployment as one Application!!!
+	
+		Process / tasks / Functions / Modules 	
+	
+	
+	- 	Microservices based Architecture!
+	
+		Create a service 
+		
+		1 process === 1 service 
+	
+	
+E-commerce :
+	www.amazon.com 
+	
+	List of Process / tasks / Functions / Modules :::
+	
+		User Sign-Up					-- Developer-1 -- once the coding is completed(Testing)! 
+		User Sign-In 					-- Developer-2 --
+		Search for products
+		Add the product to cart
+		Buy the product 
+		fill the form 
+		Make payment
+		Place the Order
+		Track the status
+		
+		
+Application Owner / Architect	
+	
+	
+@@@@@@
+DAY-2
+@@@@@@
+
+
+Difference between :	
+	
+	Continuous Integration !
+	
+	Continuous Delivery !
+	
+	Continuous Deployment !
+	
+Strategy -- Process -- --- Always subjected to Continuous Improvement!!!
+
+
+Development Workflow :::
+
+	Code the changes / Module / Service 			===> Java/Python/NodeJS/Angular/.Net (Programming Languages)
+	
+	Build -- Compile and Create Artifacts(*.war/*.jar/*.exe)!!!
+	
+	Perform Unit Test 
+	
+	Testing Teams 
+		QA 
+		UAT
+		PreProd
+	
+	PROD 
+	
+
+	Continuous Integration  :::
+	
+		Code/Build/Create Artifacts and Integrate for further testing
+	
+
+Non-Prod Environment								Prod Environment ( LIVE Environment )
+	
+	DEV 											PROD 
+	QA 
+	UAT
+
+	
+
+The Production Release can be done by :
+	
+	Continuous Delivery		:	Before the code is promoted to PROD envi. we need Manual Approval from various Teams.
+	
+	Continuous Deployment 	:  	The Code can be automatically promoted to PROD Environment without any Manual Intervention.
+	
+As a DevOps Engg. is to automate this end-to-end CI/Cd/CD
+
+	Code Build, Create Artifacts, Integrate for further testing(QA/UAT) and PROD Deployment
+
+Banking Appln.
+
+Facebook
+Netflix 
+amazon.com
+google
+
+
+		People
+		Process & Strategies
+		Tools
+
+Business :::
+
+	DevOps Team :::
+		
+		Identify the various Teams involved in the end-to-end SDLC Process
+			Infra					
+			Dev
+			Test 
+			Release Management
+			Monitoring Team
+			Prod Support Team
+			Security Team
+			
+			Vendors 
+	
+		Creating CI/CD Pipeline
+	
+	Detailed DevOps assessment 
+	
+		Waterfall --> Agile --> DevOps --> DevSecOps --> SRE --> GitOps --> AIOps --> FinOps
+	
+	DevOps Tool :::
+	
+		
+			Infra-structure Team		-- Provision the servers and config the servers  - 	Terraform/Ansible/Puppet/Chef/CF/ARM
+			Dev							-- VS Code / GIT / GITHub
+			Test 						-- Selenium/Junit
+			Release Management			-- Anisible/Docker/Kubernetes/
+			Monitoring Team				-- Promethus/Grafana/Nagios/
+			Prod Support Team			-- AppDynamics		
+			Security Team				-- Static/Dynamic Code Analyzer - Sonarqube 
+			
+			Build Orchestrator or CI/CD Tools: 
+			
+			Jenkins 
+			Bamboo
+			Gitlab-ci
+			Azure Pipeline 
+	
+	
+Version Control System :::
+
+		Developer!!!	
+			samplepgm.java	index.jsp
+	
+		Version Controlled!		
+		It should be easily tracked!
+	
+		Visual Studio Code (IDE) --> to create the source.
+		
+		whenever we save the program -- it shd be assigned with a version. 
+		index.jsp v1.0			Tested -- successful
+		index.jsp v1.1
+		index.jsp v1.2
+		index.jsp v1.3
+		index.jsp v1.4
+		index.jsp v1.5			Tested -- Not working as expected	
+	
+	GIT --> Distributed VC System
+	
+	scripts :::
+	
+		shell 
+		groovy
+		yaml
+		python scripts 
+	
+	
+	DevOps Engg. write Automation Scripts.
+	
+	GIT ---> Distributed VCS ===> Local repo & Remote Repo
+	
+	Git is a Local Repository
+	
+	Remote GIT Repo / Servers
+	GitHub is a Remote Git Repository
+	Azure Repo
+	Bitbucket
+	Gitlab
+	AWS Code Commit
+
+
+@@@@@@
+Day-3
+@@@@@@
+
+	GIT File Workflow
+	
+	git:
+	
+	clone
+	add
+	commit 
+	pull		fetch & Merge	
+	fetch		only fetch
+		merge/checkout
+	push	
+	
+	GIT Installation
+
+			
+		GitHub -- Create GITHub Account 
+		GIT FORK is done!
+		
+		AWS Virtual Machines - EC2 Instances!
+		
+			Login 			
+			Create free tier account --- 12 Months
+			Create VM's -- Amazon Linux -- t2 Micro 
+
+		Install git on Windows & Linux / Mac		
+		Linux Box		
+		
+@@@@@@
+Day-4
+@@@@@@
+
+		Installation of GIT.	
+		
+			AWS - VMs'		
+				Amazon Linux 2
+				EC2 - Instances means Virtual Machines of any OS - Linux/Windows/Mac 
+
+				AMI 
+				
+			How to Access the AWS Instances!
+				
+				- EC2 Instance Connect 
+				
+				- Use Any SSH Client to access the VM's 
+					Putty
+					MobaXterm
+				
+				- Using SSH Keys thru the Command Prompt / Terminals 		
+			
+			Step 1 - Launch Amazon Linux 2 Instance
+			Step 2 - Access the instance thru Ec2 Instance Connect 
+					sudo yum update -y
+					sudo yum install git -y
+					sudo -i 					
+					git --version
+
+    1  yum update -y
+    2  exit
+    3  ls
+    4  mkdir devops
+    5  cd devops/
+    6  pwd
+    7  mkdir dir1
+    8  cd dir1/
+    9  pwd
+   10  echo "Hello"
+   11  ls
+   12  echo "Hello" >> file1.txt
+   13  ls
+   14  cat file1.txt 
+   15  echo "rec2" >> file1.txt
+   16  cat file1.txt 
+   17  history
+
+   31  cd workspace1/
+   32  ls
+   33  git init 
+   34  git config --list
+   35  git config --global user.name "Loksai"
+   36  git config --list
+   37  git config --global user.email "Loksai.eta@gmail.com"
+   38  git config --list
+   39  cd ..
+   40  mkdir workspace2
+   41  cd workspace2/
+   42  git init
+   43  git config user.name "Loksaieta"
+   44  git config user.email "Loksai.eta@xyz.com"
+   45  git config --list
+   46  git config --global --list
+   47  clear
+   48  git config --list
+   49  git config --global --list
+   50  git config --local --list
+   51  ls
+   52  ls -a
+   53  cd .git/
+   54  ls
+   55  ls -a
+   56  pwd
+   57  git history
+   58  cd ..
+   59  history   
+   
+
+			Working on GIT Local Repository:::
+			
+			git init 
+				-- 	Initialize local repo.
+				--	Create Default Branch called Master
+				
+			git config --global user.name "Loksai"
+			git config --global user.email "Loksai.eta@gmail.com"
+
+			git config user.name "Loksaieta"
+			git config user.email "Loksai.eta@xyz.com"		
+			
+			
+			projectrepo1
+			git config user.name "Loksai"
+			git config user.email "Loksai.eta@gmail.com"			
+			
+			git config
+			
+			Create a local repository.
+
+		How to use GIT Bash??
+
+On Windows MAchine:
+
+Summary:
+
+	Install Git 
+	Check the git version 
+	Create Git Local Repo
+	Git basic commands like:
+	
+	git init
+	git config
+	git add
+	git commit 
+	git status
+	git log 
+	
+	
+@@@@@@@@
+DAY-5
+@@@@@@@@
+
+	Staging Area!!!
+	
+	Project 
+			*.yaml
+			*.java 1........10
+	
+	
+	Agile :::
+	
+		file1 ---> 
+		
+	Commited a file ???
+	
+	DevOps -- to identify and fix the issues at the very early stage
+
+	Project_Folder ==> Java Web Application 
+		*.java
+		*.jsp
+		*.Class
+		*.war
+		
+		secrets
+		credential
+		
+		git init 
+				
+	Project_Folder ?
+	
+		git init 
+		git ignore
+		
+	git reset command!
+
+	GIT Repo:
+	
+		Initial Commit --- .gitignore files
+		CM1
+		CM2
+		CM3
+		CM4
+		CM5			Produce the formated report1
+		
+		
+		.....
+		git reset --hard <INITIAL_COMMIT_ID>
+
+		git reset --soft <INITIAL_COMMIT_ID>
+		
+		Batch Jobs -- 
+
+Summary:
+
+		GIT:
+			init
+			add 
+			commit
+			diff
+			show
+			revert
+			reset 
+			gitignore 
+			git ls-files 
+			git log 
+			git status
+		
+  455  cd d:
+  456  mkdir dec12
+  457  cd dec12/
+  458  mkdir repo1
+  459  cd repo1/
+  460  clear
+  461  ls
+  462  ls -a
+  463  git init
+  464  ls
+  465  ls -a
+  466  clear
+  467  ls
+  468  echo "rec1" >> file1.txt
+  469  ls
+  470  echo "rec2" >> file1.txt
+  471  cat file1.txt
+  472  echo "NewRec" > file1.txt
+  473  cat file1.txt
+  474  clear
+  475  ls
+  476  git status
+  477  git add file1.txt
+  478  clear
+  479  git status
+  480  git commit -m "Sample Commit Message"
+  481  git status
+  482  git log
+  483  echo "rec1" >> file2.txt
+  484  git add file2.txt
+  485  git status
+  486  git commit -m "Commit Msg 2 "
+  487  git status
+  488  git log
+  489  clear
+  490  echo "rec1" > file3.txt
+  491  echo "rec1" > file4.txt
+  492  git status
+  493  git add .
+  494  git status
+  495  git commit -m "Added file3 and file4"
+  496  git status
+  497  ls
+  498  git log
+  499  history
+  500  cd d:
+  501  cd dec12/
+  502  ls
+  503  mkdir repo2
+  504  cd repo2/
+  505  clear
+  506  git init
+  507  echo "rec1" >> f1.txt
+  508  git add f1.txt
+  509  git commit -m "Initial Commit"
+  510  echo "rec1" >> f2.txt
+  511  echo "rec1" >> f3.txt
+  512  ls
+  513  git status
+  514  git add .
+  515  git commit -m "CM1"
+  516  git status
+  517  clear
+  518  ls -a
+  519  git log
+  520  clear
+  521  git log
+  522  git log --oneline
+  523  git log --stat
+  524  git log
+  525  git log -1
+  526  git log --stat -1
+  527  git log --oneline -1
+  528  git show 07b1512
+  529  git log --oneline
+  530  git show e81cc90
+  531  clear
+  532  git log --oneline
+  533  git diff
+  534  git status
+  535  ls
+  536  echo "rec2" >> f3.txt
+  537  git diff
+  538  git add .
+  539  git diff
+  540  git statue
+  541  git status
+  542  git diff --cached
+  543  git diff --name-only --cached
+  544  git commit -m "CM2"
+  545  git diff
+  546  git diff HEAD
+  547  git log --oneline
+  548  git diff 536397b 07b1512
+  549  git diff 07b1512 536397b
+  550  ls
+  551  clear
+  552  ls
+  553  echo "rec1" >> file1.txt
+  554  git add .
+  555  git commit -m "CM3"
+  556  git log --oneline
+  557  ls
+  558  git revert
+  559  git log --oneline
+  560  clear
+  561  git log --oneline
+  562  git revert 536397b
+  563  git log --oneline
+  564  ls
+  565  clear
+  566  cd ..
+  567  ls
+  568  mkdir repo3
+  569  cd repo3
+  570  git status
+  571  git init
+  572  git status
+  573  ls -a
+  574  vi .gitignore
+  575  ls
+  576  ls -a
+  577  git status
+  578  git add .
+  579  git commit -m "Initial Commit"
+  580  ls
+  581  cat .gitignore
+  582  echo "rec1" >> file1.txt
+  583  git status
+  584  echo "rec1" >> s1.doc
+  585  ls
+  586  git status
+  587  git add .
+  588  git commit -m "CM1"
+  589  git log --stat
+  590  cd ..
+  591  mkdir repo4
+  592  cd repo4
+  593  git init
+  594  ls -a
+  595  vi .gitignore
+  596  git add .
+  597  git commit -m "Initial commit for gitignore"
+  598  git status
+  599  ls -a
+  600  echo "rec1" >> sample.md
+  601  git status
+  602  ls
+  603  cat .gitignore
+  604  echo "rec1" >> s1.txt
+  605  ls
+  606  git status
+  607  git status
+  608  cd ..
+  609  mkdir repo5
+  610  cd repo5
+  611  git init
+  612  echo "rec1" >> f1.txt
+  613  git add .
+  614  git commit -m "CM1"
+  615  echo "rec1" >> f2.txt
+  616  git add .
+  617  git commit -m "CM2"
+  618  echo "rec1" >> f3.txt
+  619  git add .
+  620  git commit -m "CM3"
+  621  echo "rec1" >> f4.txt
+  622  git add .
+  623  git commit -m "CM4"
+  624  echo "rec1" >> f5.txt
+  625  git add .
+  626  git commit -m "CM5"
+  627  git log --oneline
+  628  git status
+  629  ls
+  630  git ls-files
+  631  git reset --soft 816583b
+  632  git status
+  633  git status
+  634  git log --oneline
+  635  git ls-files
+  636  ls
+  637  git status
+  638  git commit -m "CM5 based on reset1"
+  639  git status
+  640  ls
+  641  git ls-file
+  642  git ls-files
+  643  git log --oneline
+  644  git reset --mixed 816583b
+  645  git log --oneline
+  646  ls
+  647  git ls-files
+  648  git status
+  649  git add .
+  650  git commit -m "CM5 based on reset2"
+  651  git log --oneline
+  652  git ls-files
+  653  ls
+  654  git reset --hard 816583b
+  655  git log --oneline
+  656  git ls-files
+  657  ls
+  658  git reset --hard f4eae20
+  659  git ls-files
+  660  git log --oneline
+  661  ls
+  662  clear
+  663  git status
+  664  git log --oneline
+  665  git revert 42e7a94
+  666  git log --oneline
+  667  clear
+  668  history
+  669  git log --oneline
+  670  git reset --soft f4eae20
+  671  git log --oneline
+  672  git revert 42e7a94
+  673  cd ..
+  674  mkdir repo6
+  675  cd repo6
+  676  git init
+  677  echo "rec1" >> f1.txt
+  678  git add .
+  679  git commit "CM1"
+  680  git commit -m "CM1"
+  681  echo "rec1" >> f2.txt
+  682  git commit "CM1"	 
+  683  git add .
+  684  git commit -m "CM2"
+  685  echo "rec1" >> f3.txt
+  686  git add .
+  687  git commit -m "CM3"
+  688  clear
+  689  git log --oneline
+  690  git revert 0f3bef3
+  691  git log --oneline
+  692  git reset --soft b3ef072
+  693  git log --oneline
+  694  history
+
+
+@@@@@@@@@@@
+#DAY-6 & 7
+@@@@@@@@@@@
+
+	GIT Branches
+	
+		GIT Branching Strategies!!!! -- used to isolate the code changes from master branch in order ensure the integrity of Master Branch.
+		
+		git init  
+		
+		
+		master 					===> consider as a master copy or prod copy of the source code.
+		
+			develop 
+		
+				feature1		
+				feature2
+				feature3
+		
+		
+	Local Repo 						Remote Repo	
+	
+	
+	
+	GIT Remote Repository
+
+
+		Java_Project_folder (master)
+			index.jsp 
+			home.html
+			process.java 
+			
+		feature1 		branch 
+			
+			index.jsp 
+			home.html
+			process.java 			
+			
+
+	GIT Branching Strategies!!!!
+	
+	master 	release 								
+	(hotfix/adhoc)
+		Release Branch	
+			Integration Branch	 ==> - final_CM		
+				develop_Branch1(Team1) ==> ==> cm1,2,3,4,5,6,7,8,9......100 -- cm1,2,3,4,5,6,7,8,9......100
+					feature1 			--> Change request1 ==> cm1,2,3,4,5,6,7,8,9......100 - final_CM
+					
+					feature2 			--> Change request2 ==> cm1,2,3,4,5,6,7,8,9......100
+					feature3 			--> Change request3 ==> cm1,2,3,4,5,6,7,8,9......100
+				develop_Branch2(Team1)
+					feature1 			--> Change request1 
+					feature2 			--> Change request2
+					feature3 			--> Change request3						
+				develop Branch(Team2) 
+					feature1 			--> Change request1
+					feature2 			--> Change request2
+					feature3 			--> Change request3		
+
+Create the branch
+WOrk on the branch
+merge the changes to upstream branch (master) 
+
+	git checkout -b feature1 
+	git branch feature1 
+	git switch
+	
+	
+	git merge feature1 
+	
+	master 
+		feature1
+		feature2
+		feature3
+		
+	repo:
+	
+				master	f1.txt
+				
+	developer1		f1	f1.txt 
+	developer2		f2  f1.txt 
+
+
+	Merge Conflict : 
+
+v1 s1.txt 
+rec1
+rec from feature2
+
+		gitbash/gui -- local repository
+		gitlab
+		azure repos
+		aws code commit 
+		bit bucket 
+		github
+
+
+	git rebase
+	
+	git squash
+	
+		
+		master 		
+			cm1,cm2,cm3
+			cm1,cm2,cm3,f1cm1,f1cm2
+			cm1,cm2,cm3,f1cm1,f1cm2,f2cm1,f2cm2		
+			
+			feature1 
+				cm1,cm2,cm3
+				cm1,cm2,cm3,f1cm1,f1cm2
+				
+	
+			feature2
+				cm1,cm2,cm3
+				cm1,cm2,cm3,f2cm1,f2cm2
+
+
+			rebase!!!!
+			
+			feature2
+				cm1,cm2,cm3
+				cm1,cm2,cm3,f2cm1,f2cm2
+				
+				> git rebase master 
+				
+				cm1,cm2,cm3,f1cm1,f1cm2,f2cm1,f2cm2
+
+	fast forward merge . 
+
+
+		****
+			Before you merge your feature to the upstream branch. Always do rebase.
+			Rebase is used to sync your feature branch with your upstream branch.
+			
+			
+	git squash :::
+	
+		It is used to combine the commits!!!!
+	sqash can be performed:
+	
+	-	Before Merge 
+			master ==> cmfn1,cmfn2
+				feature_Branch --> CM1,2,3,4,5 - cmfn1 --> cm6,7,8,9,10 --> cmfn2
+		
+		run the below command from feature branch :		
+			> git rebase -i HEAD~4
+		
+	-	While Merging 
+				feature_Branch --> cm1,2,3,4,5,6,7,8,9......100 - final_CM
+		
+		run the below command from master :
+			> git merge --squash <feature1>
+
+rebase::
+
+	master
+		cm1,cm2,cm1 from feature1
+		
+	feature1 
+		cm1,cm2,cm1 from feature1
+
+	feature2
+		cm1,cm2,cm1 from feature2,cm2 from feature2
+
+	git merge feature2:::
+	
+		cm1,cm2,cm1 from feature2,cm2 from feature2,cm1 from feature1
+
+STASH ???
+
+	
+		master 
+			feature1 ----> src.java --> added to staging  		
+			git status 		
+			feature2 
+	
+
+GIT Remote Repository!!!!
+
+		github!!!
+		
+		create, branch, merge - pull reqest, fork, create access token.
+		
+		fork 		--> Used to copy one remote repo to another.
+		git clone 	--> used to copy the remote repo into local repo 
+		git fetch	
+		git pull
+		git push
+		
+		git remote -v 
+		git remote add 
+		git remote remove 
+
+		Pull Request :
+		
+		
+			git clone https://github.com/LoksaiETA/dec12-dummyrepo1.git
+	
+			create git token to perform code push from local repo.
+			
+			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
+	
+	
+@@@@@@@@@
+DAY-8
+@@@@@@@@@
+
+	Jenkins - Continuous Integration / Delivery / Deployment 
+	
+	CI / CD / CD 
+	
+	Jenkins -- Build Orchestrator! or CICD Orchestration Tool. 
+	
+	DEV 
+	Dev Server/Machine :
+	
+	Create the src code 
+	commit to repo 
+	
+	Build Server :
+	
+	build ( compile the src code and create artifacts *.war)
+	
+	Deploy the artifacts to the :
+	
+	Host Server (Application server - tomcat / nginx)
+	
+	QA 
+	UAT
+	PROD
+	
+	GIT -- version ctrl the src code!
+	
+	
+	Java Program! Web Application 
+	
+	build and deployed .
+	
+	DevOps :::
+	
+	CDevelopment --> 
+	
+	CIntegration --> Contious Testing --> CDelivery / Deployment --> CMonitoring
+	
+	Build Orchestration Tool
+	
+		Jenkins			supports groovy scripts!
+		
+	Other Orchestration Tools 
+		Bamboo 
+		Gitlab-ci 				yaml scripts!
+		Code Pipeline 
+		Azure Pipeline
+	
+
+	How to use Jenkins!!!
+	
+		Jenkins is a Client - Server Architecture! is used to distribute the jenkins workload 
+		
+		Jenkins Master Machine 					--> Installing Jenkins
+			Jenkins Slave Machine1	--> Java apps -->	Maven Tool  (5 Jobs)	  -- Agent1 1 WS(500MB)
+			Jenkins Slave Machine1.1--> Java apps -->	Maven Tool  (5 Jobs)	  -- Agent1 1 WS(500MB)
+
+			Jenkins Slave Machine2	--> Python 	
+			Jenkins Slave Machine3	--> NodeJS	
+			Jenkins Slave Machine4	--> Angular
+			Jenkins Slave Machine5	--> .Net 
+		
+	How to Install and Configure Jenkins Master!
+	
+		2 VMs' on AWS
+			Jenkins Master & Slave 
+			
+			https://www.jenkins.io/doc/book/installing/
+	
+	Jenkins Roles & Responsibilities:::
+	
+		Developers
+			Consumer!
+				read,run the jenkins jobs.
+				and check for console out or result
+		DevOps Engg.:	
+			Installation & Configuration
+			Managing the plugins 
+			Security 
+			Access 
+			Create Jenkins CI/CD Jobs & Templates
+			User Access 
+			Upgrade and Management 
+	
+		Jenkins Job ::: any project 
+
+				Build		-- compile and create artifact 
+				
+				Deploy		-- deploy the artifacts
+	
+
+
+
+	Summary::
+		Launch EC2 Instance 
+		Install and config Jenkins 
+		Create simple free-style project.
