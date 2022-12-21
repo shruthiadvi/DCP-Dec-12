@@ -939,8 +939,6 @@ GIT Remote Repository!!!!
 			git clone https://github.com/LoksaiETA/dec12-dummyrepo1.git
 	
 			create git token to perform code push from local repo.
-			
-			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
 	
 	
 @@@@@@@@@
