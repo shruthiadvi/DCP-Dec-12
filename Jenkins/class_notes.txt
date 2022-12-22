@@ -939,6 +939,7 @@ GIT Remote Repository!!!!
 			git clone https://github.com/LoksaiETA/dec12-dummyrepo1.git
 	
 			create git token to perform code push from local repo.
+		
 	
 	
 @@@@@@@@@
@@ -1041,3 +1042,130 @@ DAY-8
 		Launch EC2 Instance 
 		Install and config Jenkins 
 		Create simple free-style project.
+
+
+@@@@@@@
+DAY-9
+@@@@@@@
+
+	Jenkins Jobs/Project :::
+		Freestyle -- Manual Configuration 
+		pipeline  -- Using Groovy Scripts we configure.
+			
+	Variables!
+		User Defined Variables
+		Environmental Variables
+		
+	Job Execution!
+	
+		Manual
+		Automatic
+			Build Periodic (Scheduling Jobs)
+			GIHUB Webhook
+			
+			Post Build Action :
+				Job1 --> create a report 
+				Job2 --> Format that report 
+	
+	Notifications!
+		Email
+		
+	
+	CIntegration --> Contious Testing --> CDelivery / Deployment --> CMonitoring
+			
+	
+	Deployment Job  is to deploy some artifacts to the test environments!
+	
+		QA 
+		UAT 
+		PRE-PROD 
+	
+	
+	Jenkins Pipeline :
+	
+		Scripted Pipeline
+		
+		
+		Declarative Pipeline
+		
+pipeline {
+    agent any
+
+    stages {
+        stage('Code Checkout') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Create Artifact') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Deploy to QA') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Deploy to UAT') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Deploy to PROD') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+	
+		
+		Jenkins - Master Slave Configuration :
+		
+			Configure the Slave Machine!
+			
+			Configure the Node in Jenkins master.
+	
+	
+What is the purpose of slave Machine? 
+
+		Jave Build --> 
+		
+			GIT 
+			Install JDK 
+			Install Maven build tool (compile and create artifacts)
+		
+		Connect to the Master
+
+			User name!
+			
+			username & pswd 
+			username with keys / token 
+			
+			SSH Key 
+			
+				private key
+				public key
+			
+			Passwordless auth. 
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
