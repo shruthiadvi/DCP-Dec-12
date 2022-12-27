@@ -133,3 +133,100 @@ chmod 700 /home/devopsadmin/.ssh
 Login to Jenkins thru browser, Go to Manage Jenkins --> Config Nodes -- > Add New Node 
 
 Config the Node Name, Label, Access thru SSH Parm - user Name, with private key
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~``
+
+Goto Global Tools config. Settings and ADD Maven Installation Details.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+#Install Maven Integration Plugin 
+
+#Install Docker Pipeline Plugin
+
+yum install git 
+
+
+
+Pipeline Script:
+
+pipeline {
+    
+    agent {
+        label 'slave1'
+    }
+
+    tools 
+    {
+        maven 'Maven-3.8.6'
+    }
+    
+    stages {
+        stage('SCM-Checkout') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+
+            }
+			}
+        stage('Build') {
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+			}
+
+        stage('Deploy to QA Server') {
+            steps {
+                // Run Maven on a Unix agent.
+				script {
+					sshPublisher(publishers: [sshPublisherDesc(configName: 'QA-Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+			}
+    }
+}
+
+**************************************************************************************
+
+#Github webhook to automatically trigger build pipeline!
+
+#Goto Github Repository setting, 
+Select webhook, 
+
+Click Add Webhook
+
+Enter Jenkins Master URL. eg.:
+http://<public-IP>:8080/github-webhook/
+
+http://35.154.44.76:8080/github-webhook/
+
+Choose the push event and save the webhook configuration
+
+**********************************************************************************
+
+Build Periodic:
+want to trigger a build for every one hour only
+
+
+Intall GIT on your Jenkins Master!
+
+	Poll SCM:
+	want to trigger a build for every one hour only if there is any commit happened in the src repo 
+
+	Github Webhook!!
+	want to trigger a build for every commit happened in the src repo 
+
+DEV envi.
+
+	Dev1 == commit to his src code repo --->>
+	to perform some unit testing 
+	
+	His test cycle runs every 6 hrs.
+	
+		- Code promotion to QA 
+		
+	poll SCM !
+	
+		Done with QA Testing src code has been updated the the required commit 
+		
+	GITHUB Webhook !
