@@ -1,0 +1,104 @@
+#**************************************************************************************************************************
+###Ansible - Demo.
+
+##Adhoc Commands:
+
+###test ssh connection from ansible host/controller to remote hosts
+
+ssh ansibleadmin@172.31.1.175
+ssh ansibleadmin@172.31.0.194
+
+###update vi etc/ansible/host
+#**************************************
+#hosts file is the default Inventory file for ansible 
+#**************************************
+
+[testnodes]
+samplenode1 ansible_ssh_host=172.31.1.175 ansible_ssh_user=ansibleadmin
+samplenode2 ansible_ssh_host=172.31.0.194 ansible_ssh_user=ansibleadmin
+
+#**************************************************************************************************************************
+#Access thru Ansible Controller :
+#**************************************************************************************************************************
+Ansible Modules: Eg.: 
+
+setup,copy,fetch,user,command,shell,ping,service,yum
+
+ansible testnodes -m ping
+
+ansible all -m ping ### will ping all hosts from /etc/ansible/hosts file
+
+ansible samplenode1 -m ping
+ansible samplenode2 -m ping
+
+#or using user defined Inventory file
+#ansible ansible-node1 -m ping -i myinventoryfile.txt
+
+#**************************************************************************************************************************
+
+ansible samplenode2 -m ping
+ANSIBLE_KEEP_REMOTE_FILES=1 ansible samplenode1 -m shell -a "sleep 5 ; echo 'hi'"
+
+ANSIBLE_KEEP_REMOTE_FILES=1 ansible samplenode1 -m shell -a "uptime"
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Ansible Facts!
+
+ansible samplenode1 -m setup
+ansible samplenode2 -m setup -a "filter=ansible_mounts"
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##Transfer a file from Ansible Controller to Nodes using copy Module
+
+ansible samplenode1 -m copy -a "src=/etc/ansible/s1.txt dest=/home/ansibleadmin"
+
+ansible samplenode1 -m copy -a "src=/etc/ansible/s1.txt dest=/home/ansibleadmin backup=yes"
+
+ansible samplenode1 -m copy -a "src=/home/devopsadmin/test1.txt dest=/home/ansibleadmin backup=yes"
+
+
+###idempotent
+
+ansible testnodes -m copy -a "content='hello from Ansible Controller\n' dest=/dest/path/hello.txt"
+
+ansible testnodes -m copy -a "content='hello from Ansible Controller\n' dest=/dest/path/hello.txt backup=yes"
+
+ansible testnodes -m copy -a "content='hello from Ansible Controller\n' dest=/dest/path/hello.txt backup=yes"
+
+##Transfer a file from Ansible Nodes to Ansible Controller using fetch Module
+
+ansible samplenode1 -m fetch -a "src=/home/ansibleadmin/node1file.txt dest=/home/devopsadmin"
+
+UseCase 1 :
+	- Deploy an artifact *.war from Jenkins Slave Machine to QA-Server.
+
+#Adhoc Commands with various Modules
+#How Ansible Works?
+#Ansible Facts & Variables
+
+#######Adhoc Commands with various Modules
+
+###Test Connection:
+ansible testnodes -m ping
+
+### Test Uptime of Nodes:
+ansible testnodes -m shell -a "uptime"
+
+### Pass Multiple Groups:
+ansible testnodes1:testnodes2 -m shell -a "uptime"
+
+### Check RAM Utilization:
+ansible testnodes -m shell -a "free -m"
+
+###Pass Different Inventory File:
+ansible -i inventory_file_name prodnodes -m shell -a "uptime"
+
+
+### List all modules:
+ansible-doc -l
+### No. of modules:
+ansible-doc -l | wc -l
+### Search for specific modules:
+ansible-doc -l | grep shel
+### To know about any specific modules:
+ansible-doc shell
