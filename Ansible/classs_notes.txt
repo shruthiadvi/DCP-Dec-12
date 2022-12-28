@@ -1427,6 +1427,7 @@ Ansible!
 	
 		modules 		Functions to be executed in target servers (yum,apt-get)
 	
+	
 @@@@@@@
 DAY-12
 @@@@@@@
@@ -1446,34 +1447,43 @@ DAY-12
 	--> Testing Team
 		1---- 20 Servers
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	Key Based Auth.:
 	
 	Create the SSH Keys in Anisible Controller 
 	
 	& use t public key in all the worker nodes to accesas
 	
+
+
+@@@@@@@
+DAY-13
+@@@@@@@
+
+	Ansible Playbooks!!!!
+	10+10 resources!
+	
+	playbook1.yaml 
+	
+		tasks 
+			modules
 	
 	
+	{{var_name}} == Jinja2 Template
+				
+	
+	playbooks!
+	handlers
+	vars
+
+Ansible Roles are used to organize the Ansible components and reuse.
+	
+	Ansible Architecture
+	Installation / Config of AC & Nodes 
+	Modules
+	Playbooks
+	Inventory
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+Docker & Kubernetes!!!!
+
+	Docker????
