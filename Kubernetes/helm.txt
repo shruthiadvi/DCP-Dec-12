@@ -1,0 +1,111 @@
+HELM Chart:::
+Helm is a pkg manager for kubernetes
+which help to automatically create manifest files for any kubernetes objects in the form of HELM Charts
+
+HELM Chart for prometheus
+
+Eg.: Kubernetes Dashboard installation using HELM
+
+Install HELM 
+on kubernetes master node install Helm
+
+#Downlaod helm tar ball for linux
+wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
+
+#https://github.com/helm/helm/releases/download/v3.9.4/helm-v3.9.4-linux-amd64.tar.gz.asc
+
+#Extract tar ball
+tar -zxvf helm-v3.6.3-linux-amd64.tar.gz
+
+#Move helm to usr/local/bin/helm
+sudo mv linux-amd64/helm /usr/local/bin/helm
+
+vi .bash_profile 
+
+#Append the helm path to PATH Variable and save.
+
+/usr/local/bin
+
+source ~/.bash_profile
+
+#run helm
+helm
+
+#Install Kubernetes Dashboard using Helm
+
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard
+
+helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
+
+kubectl get svc 
+
+#choose kubernetes-dashboard service 
+
+kubectl edit svc kubernetes-dashboard
+
+#goto type: key && Change ClusterIP to NodePort & save the file
+
+#Now check the service, it should show you, NortPort with Nodeport IP
+
+kubectl get svc 
+
+# Now use the external IP & Nodeport to access the dashboard. When it asked for token, execute following commands to create service account & token
+
+kubectl create serviceaccount dashboard -n default
+
+kubectl create clusterrolebinding dashboard-admin -n default --clusterrole=cluster-admin --serviceaccount=default:dashboard
+
+kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+
+https://15.207.114.100:31290/
+
+https://65.1.130.134:30107/
+
+
+https://3.111.218.48:30945/
+*******************************************************
+
+https://13.233.197.98:30647/
+
+
+  238  helm --version
+  239  kubectl get pods
+  240  helm repo remove kubernetes-dashboard https://kubernetes.github.io/dashboard
+  241  helm remove kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
+  242  helm uninstall kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
+  243  kubectl get svc
+  244  kubectl get pods
+  245  kubectl get serviceaccount
+  246  kubectl delete serviceaccount dashboard
+  247  kubectl get serviceaccount
+  248  kubectl get clusterrolebinding
+  249  kubectl delete clusterrolebinding dashboard-admin
+  250  kubectl get clusterrolebinding dashboard-admin
+  251  kubectl get clusterrolebinding
+  252  history
+
+
+  246  wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
+  247  tar -zxvf helm-v3.6.3-linux-amd64.tar.gz
+  248  sudo mv linux-amd64/helm /usr/local/bin/helm
+  249  vi .bash_profile
+  250  source ~/.bash_profile
+  251  helm
+  252  clear
+  253  helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard
+  254  helm install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
+  255  kubectl get svc
+  256  kubectl edit svc kubernetes-dashboard
+  257  kubectl get svc
+  258  kubectl create serviceaccount dashboard -n default
+  259  kubectl create clusterrolebinding dashboard-admin -n default --clusterrole=cluster-admin --serviceaccount=default:dashboard
+  260  kubectl get secret $(kubectl get serviceaccount dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+  261  kubectl delete clusterrolebinding dashboard-admin
+  262  kubectl get  clusterrolebinding dashboard-admin
+  263  kubectl delete serviceaccount dashboard
+  264  kubectl get serviceaccount dashboard
+  265  kubectl get svc
+  266  kubectl delete svc kubernetes-dashboard
+  267  helm uninstall kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard
+  268  helm repo remove kubernetes-dashboard https://kubernetes.github.io/dashboard
+  269  history
